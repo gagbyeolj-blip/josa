@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>조사 캐처</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="hero">
+      <p class="eyebrow">KOREAN GRAMMAR GAME</p>
+      <h1>조사 캐처</h1>
+      <p class="subtitle">하늘에서 떨어지는 조사를 드래그해서 알맞은 상자에 넣어 봐!</p>
+    </header>
+
+    <section class="stats" aria-label="게임 정보">
+      <article class="stat-card">
+        <span class="label">점수</span>
+        <strong id="score">0</strong>
+      </article>
+      <article class="stat-card">
+        <span class="label">생명</span>
+        <strong id="lives">❤️❤️❤️</strong>
+      </article>
+      <article class="stat-card">
+        <span class="label">최고 점수</span>
+        <strong id="best">0</strong>
+      </article>
+    </section>
+
+    <p id="message" class="message" aria-live="polite">시작 버튼을 누르고 조사를 분류해 봐!</p>
+
+    <section class="game-shell">
+      <div id="gameArea" class="game-area" aria-label="떨어지는 조사를 드래그하는 게임 영역">
+        <div id="emptyState" class="empty-state">
+          <div class="empty-icon">☁️</div>
+          <h2>조사 캐처</h2>
+          <p>위에서 떨어지는 조사를 잡아서 알맞은 조사 상자에 넣어 봐!</p>
+          <small>마우스나 손가락으로 드래그하면 돼.</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="zones-section" aria-label="조사 종류 상자">
+      <div id="dropZones" class="drop-zones"></div>
+    </section>
+
+    <div class="actions">
+      <button id="startBtn" class="main-btn">게임 시작하기</button>
+      <button id="pauseBtn" class="sub-btn" disabled>일시정지</button>
+    </div>
+
+    <p class="guide-text">주격·목적격·보격·관형격·부사격·호격·서술격·보조사·접속 조사를 대표 용례 기준으로 분류해요.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
